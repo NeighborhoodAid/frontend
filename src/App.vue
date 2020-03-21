@@ -3,8 +3,9 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <span v-if="$store.getters['userModule/isLoggedIn']"> <router-link to="/profile">Profile</router-link> | </span>
-      <span v-if="$store.getters['userModule/isLoggedIn']"> <router-link to="/logout">Logout</router-link> </span>
+      <span v-if="$store.getters['userModule/isLoggedIn']"><router-link to="/profile">Profile</router-link> | </span>
+      <span v-if="$store.getters['userModule/isLoggedIn']"><router-link to="/list">Einkaufsliste</router-link> | </span>
+      <span v-if="$store.getters['userModule/isLoggedIn']"><router-link to="/logout">Logout</router-link> </span>
       <span v-else> <router-link to="/login">Login</router-link></span>
     </div>
     <router-view/>
@@ -22,6 +23,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
