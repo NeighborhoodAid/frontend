@@ -1,6 +1,9 @@
 import axios from 'axios';
+import {ServerGateway} from "@/gateways/http/server.gateway";
 
 export class UserGateway {
+
+    constructor(private httpClient: ServerGateway) {}
 
     /**
      * @param email
@@ -8,7 +11,7 @@ export class UserGateway {
      */
     login(email: string, password: string): void {
         // ToDo: not finished implemented
-        axios.post('http://.../api/v1/login', {data: {email: email, password: password}});
+        this.httpClient.getHttpInstance().post('http://.../api/v1/login', {data: {email: email, password: password}});
     }
 
     /**
@@ -19,6 +22,6 @@ export class UserGateway {
      */
     signup(email: string, password: string, mailAddress: string, phoneNumber: string): void {
         // ToDo: not finished implemented
-        axios.post('http://.../api/v1/signup', {data: {email: email, password: password, mailAddress: mailAddress, phoneNumber: phoneNumber}});
+        this.httpClient.getHttpInstance().post('http://.../api/v1/signup', {data: {email: email, password: password, mailAddress: mailAddress, phoneNumber: phoneNumber}});
     }
 }
