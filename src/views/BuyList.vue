@@ -34,8 +34,6 @@ export default Vue.extend({
     methods: {
         /*Check item from list*/
         checkItem: function (product) {
-            console.log(product);
-            console.log(this.checkedProducts);
             if (this.checkedProducts.includes(product)) {
                 console.log("true")
                 let i = 0;
