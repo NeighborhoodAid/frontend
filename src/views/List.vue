@@ -5,14 +5,19 @@
         <div id="myDIV" class="header">
             <input type="text" id="number" placeholder="3">
             <input type="text" id="supply" placeholder="Bananen">
-            <span onclick="newElement()" class="addBtn">Hinzuf&uuml;gen</span>
+            <span onclick="newElement()" class="addBtn">Hinzuf&uuml;gen</span><br />
+            <div class="checkComment">
+                <input type="checkbox" id="addcomment" name="addcomment" value="HasComment">
+                <label for="addcomment"> Notiz hinzuf&uuml;gen</label><br>
+            </div>
+            <input type="text" id="comment" placeholder="Die glutenfreien Nudeln von Seitz schmecken am besten. Falls da, bitte diese.">
         </div>
 
         <ul id="myUL">
             <li>4 &Auml;pfel</li>
             <li class="checked">2 Packungen Nudeln</li>
             <li>Toilettenpapier</li>
-            <li>1 Packung Roggenbrot</li>
+            <li>1 Packung glutenfreie Nudeln</li>
             <li>3 Milch</li>
             <li>&Uuml;berraschungseier</li>
         </ul>
@@ -23,34 +28,46 @@
     </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
-import router from '../router'
 export default Vue.extend({
-    // Create a "close" button and append it to each list item
-    // Click on a close button to hide the current list item
-    // Add a "checked" symbol when clicking on a list item
-    // Create a new list item when clicking on the "Add" button
 })
 </script>
 
 <style lang="scss" scoped>
 
+    /*Things concerning the checkbox and Comment-Field*/
+    .checkComment {
+        text-align: left;
+        margin: 30px 0 5px 0px;
+    }
+    
+    /*place checkbox*/
+    #addcomment {
+        margin: 4px 7px;
+    }
+
+    /*Place label fr checkbox */
+    label {
+        margin: 5px;
+    }
+
+
     .publish {
-      padding: 30px 40px;
-      text-align: center;
+        padding: 30px 40px;
+        text-align: center;
     }
 
     button {
-      background-color: #80e6e2;
-      color: #555;
-      font-size: 16px;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 30%;
-      float: right;
+        background-color: #80e6e2;
+        color: #555;
+        font-size: 16px;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 30%;
+        float: right;
     }
 
     button:hover {
@@ -95,18 +112,18 @@ export default Vue.extend({
         }
 
         /* Darker background-color on hover */
-    ul li:hover {
-        background: #ddd;
-    }
+        ul li:hover {
+            background: #ddd;
+        }
 
-    /* When clicked on, add a background color and strike out text */
-    ul li.checked {
-      background: #888;
-      color: #fff;
-      text-decoration: line-through;
-    }
+        /* When clicked on, add a background color and strike out text */
+        ul li.checked {
+            background: #888;
+            color: #fff;
+            text-decoration: line-through;
+        }
 
-    /* Add a "checked" mark when clicked on */
+            /* Add a "checked" mark when clicked on */
     ul li.checked::before {
       content: '';
       position: absolute;
@@ -166,6 +183,11 @@ export default Vue.extend({
     /*thing to buy*/
     #supply {
       width: 65%
+    }
+
+    #comment {
+        width: 100%;
+        height: 2em;
     }
 
     /* Style the "Add" button */
