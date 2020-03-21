@@ -4,6 +4,8 @@
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
       <router-link v-if="$store.getters['userModule/isLoggedIn']" to="/profile">Profile</router-link>
+      <router-link v-if="$store.getters['userModule/isLoggedIn']" to="/createList">Liste erstellen</router-link>
+      <router-link v-if="$store.getters['userModule/isLoggedIn']" to="/buyList">Liste kaufen</router-link>
       <router-link v-if="$store.getters['userModule/isLoggedIn']" to="/logout">Logout</router-link>
       <router-link v-else to="/login">Login</router-link>
     </div>
