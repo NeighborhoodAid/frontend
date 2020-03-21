@@ -1,17 +1,25 @@
 import axios, { AxiosInstance } from 'axios';
+import {UserModel} from "@/models/user.model";
 
 export class ServerGateway {
 
-    private httpInstance: AxiosInstance;
+    private readonly BASE_URL = 'http://.../api/v1/';
+    private readonly TIMEOUT  = 1000;
 
-    constructor() {
-        this.httpInstance = axios.create({
-            baseURL: 'http://.../api/v1/',
-            timeout: 1000,
+    constructor() {}
+
+    public getHttpInstance(): AxiosInstance {
+        return axios.create({
+            baseURL: this.BASE_URL,
+            timeout: this.TIMEOUT,
         })
     }
 
-    public getHttpInstance() {
-        return this.httpInstance;
+    public getHttpInstanceForUser(user: UserModel): AxiosInstance {
+        return axios.create({
+            baseURL: this.BASE_URL,
+            timeout: this.TIMEOUT,
+            headers: {'Authorization': user.identifier}
+        })
     }
 }
