@@ -2,19 +2,19 @@
     <div class="list">
         <h1>Einkaufliste erstellen</h1>
 
-        <form id="myDIV" class="header">
-            <input type="text" id="count" placeholder="3">
-            <input type="text" id="name" placeholder="Bananen">
-            <button type="submit" onclick="newElement()" class="addBtn">Hinzuf&uuml;gen</button><br />
+        <form id="myDIV" class="header" @submit.prevent="addProduct()">
+            <input type="text" id="count" placeholder="3" v-model="count">
+            <input type="text" id="name" placeholder="Bananen" v-model="supply">
+            <button type="submit" class="addBtn">Hinzuf&uuml;gen</button><br />
             <div class="checkComment">
-                <input type="checkbox" id="addcomment" name="addcomment" value="HasComment" v-model="seen">
+                <input type="checkbox" id="addcomment" name="addcomment" v-model="seen">
                 <label for="addcomment"> Notiz hinzuf&uuml;gen</label><br>
             </div>
-            <input type="text" id="comment" v-if="seen" placeholder="Die glutenfreien Nudeln von Seitz schmecken am besten. Falls da, bitte diese.">
+            <input type="text" id="comment" v-if="seen" v-model="comment" placeholder="Die glutenfreien Nudeln von Seitz schmecken am besten. Falls da, bitte diese.">
         </form>
 
         <ul id="list">
-            <li  v-for="product in products" :key="product.id">
+            <li  v-for="(product, index) in products" :key="index">
                 {{product}}
             </li>
         </ul>
@@ -28,7 +28,7 @@
 <script>
 import Vue from 'vue'
 export default Vue.extend({
-    el: '#list',
+    //el: '#list', // todo cannot find element list! el kan only be used during instance creation?
     data: function () {
         return {
             products: [
@@ -37,11 +37,25 @@ export default Vue.extend({
                 'Pfirsiche'
             ],
             seen: false,
-            product: {
-                count: 1,
-                name: "",
-                comment: ""
+            supply: "",
+            count: 1,
+            comment: ""
+        }
+    },
+    methods: {
+        addProduct: function () {
+            let newEntry = "";
+            if (this.seen) {
+                newEntry = this.count + " " + this.supply + " (" + this.comment + ")";
+            } else {
+                newEntry = this.count + " " + this.supply;
             }
+            this.products.push(newEntry);
+            this.supply = "";
+            this.count = 1;
+            this.comment = "";
+            this.seen = false;
+            return
         }
     }
 })  
