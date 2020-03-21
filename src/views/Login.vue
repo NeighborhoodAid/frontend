@@ -1,18 +1,18 @@
 <template>
     <div class="login">
         <h1>Login</h1>
-        <form id="login-form" @submit.prevent="onLogin">
+        <form action="FIXME" method="FIXME">
             
             <div class="container">
                 <label for="email"><b>E-Mail Adresse</b></label>
-                <input v-model="email" type="text" placeholder="max.mustermann@gmx.de" name="email" required>
+                <input type="text" placeholder="max.mustermann@gmx.de" name="email" required>
 
                 <label for="psw"><b>Passwort</b></label>
-                <input v-model="password" type="password" placeholder="Passwort" name="psw" required>
+                <input type="password" placeholder="Passwort" name="psw" required>
 
                 <button type="submit">Anmelden</button>
                 <label>
-                    <input v-model="stayLoggedIn" type="checkbox" checked="checked" name="remember"> Angemeldet bleiben
+                    <input type="checkbox" checked="checked" name="remember"> Angemeldet bleiben
                 </label>
             </div>
 
@@ -25,28 +25,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import router from '../router'
 export default Vue.extend({
-  data: function () {
-    return {
-    password: ""
-  }},
-  methods: {
-    onLogin: async function (){
-      await this.$store.dispatch("userModule/login", this.password)
-      router.push("/");
-    }
-  },
-  computed:{
-    email: {
-      get () { return this.$store.state.userModule.email },
-      set (value) { this.$store.commit('userModule/setEmail', value) }
-    },
-    stayLoggedIn: {
-      get () { return this.$store.state.userModule.stayLoggedIn },
-      set (value) { this.$store.commit('userModule/setStayLoggedIn', value) }
-    }
-  }
+
 })
 </script>
 

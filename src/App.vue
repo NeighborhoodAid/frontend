@@ -3,23 +3,12 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <span v-if="$store.getters['userModule/isLoggedIn']"> <router-link to="/profile">Profile</router-link> | </span>
-      <span v-if="$store.getters['userModule/isLoggedIn']"> <router-link to="/logout">Logout</router-link> </span>
-      <span v-else> <router-link to="/login">Login</router-link></span>
+      <router-link to="/profile">Profile</router-link> |
+      <router-link to="/login">Login</router-link>
     </div>
     <router-view/>
   </div>
 </template>
-
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
-  mounted: function () {
-    this.$store.dispatch("userModule/init");
-  }
-})
-</script>
 
 <style lang="scss">
 #app {
