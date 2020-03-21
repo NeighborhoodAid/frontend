@@ -3,8 +3,8 @@
         <h1>Einkaufliste erstellen</h1>
 
         <form id="myDIV" class="header">
-            <input type="text" id="number" placeholder="3">
-            <input type="text" id="supply" placeholder="Bananen">
+            <input type="text" id="count" placeholder="3">
+            <input type="text" id="name" placeholder="Bananen">
             <button type="submit" onclick="newElement()" class="addBtn">Hinzuf&uuml;gen</button><br />
             <div class="checkComment">
                 <input type="checkbox" id="addcomment" name="addcomment" value="HasComment">
@@ -46,6 +46,10 @@ export default Vue.extend({
 
 
 <style lang="scss" scoped>
+
+    #comment {
+        display:none
+    }
 
     /*Things concerning the checkbox and Comment-Field*/
     .checkComment {
@@ -187,12 +191,12 @@ export default Vue.extend({
     }
 
     /*number of things to buy*/
-    #number {
+    #count {
       width: 10%
     }
 
     /*thing to buy*/
-    #supply {
+    #name {
       width: 65%
     }
 
