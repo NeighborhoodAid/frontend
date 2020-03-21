@@ -7,10 +7,10 @@
             <input type="text" id="name" placeholder="Bananen">
             <button type="submit" onclick="newElement()" class="addBtn">Hinzuf&uuml;gen</button><br />
             <div class="checkComment">
-                <input type="checkbox" id="addcomment" name="addcomment" value="HasComment">
+                <input type="checkbox" id="addcomment" name="addcomment" value="HasComment" v-model="seen">
                 <label for="addcomment"> Notiz hinzuf&uuml;gen</label><br>
             </div>
-            <input type="text" id="comment" placeholder="Die glutenfreien Nudeln von Seitz schmecken am besten. Falls da, bitte diese.">
+            <input type="text" id="comment" v-if="seen" placeholder="Die glutenfreien Nudeln von Seitz schmecken am besten. Falls da, bitte diese.">
         </form>
 
         <ul id="list">
@@ -35,21 +35,21 @@ export default Vue.extend({
                 '40 Packungen Toilettenpapier',
                 '3 Bananen',
                 'Pfirsiche'
-            ]
+            ],
+            seen: false,
+            product: {
+                count: 1,
+                name: "",
+                comment: ""
+            }
         }
     }
-    //methods: {
-
-    //}
 })  
 </script>
 
 
 <style lang="scss" scoped>
 
-    #comment {
-        display:none
-    }
 
     /*Things concerning the checkbox and Comment-Field*/
     .checkComment {
