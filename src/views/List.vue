@@ -214,6 +214,7 @@ export default Vue.extend({
         cursor: pointer;
         transition: 0.3s;
         border-radius: 0px;
+        margin: 0px;
     }
 
     .addBtn:hover {
