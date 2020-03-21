@@ -3,24 +3,24 @@
         <h1>Einkaufliste erstellen</h1>
 
         <form id="myDIV" class="header" @submit.prevent="addProduct()">
-            <input type="text" id="count" placeholder="3" v-model="count">
-            <input type="text" id="name" placeholder="Bananen" v-model="supply">
+            <input type="text" id="count" placeholder="3" v-model="quantity">
+            <input type="text" id="name" required placeholder="Artikelname" v-model="supply">
             <button type="submit" class="addBtn">Hinzuf&uuml;gen</button><br />
             <div class="checkComment">
                 <input type="checkbox" id="addcomment" name="addcomment" v-model="seen">
                 <label for="addcomment"> Notiz hinzuf&uuml;gen</label><br>
             </div>
-            <input type="text" id="comment" v-if="seen" v-model="comment" placeholder="Die glutenfreien Nudeln von Seitz schmecken am besten. Falls da, bitte diese.">
+            <input type="text" id="comment" v-if="seen" v-model="comment" placeholder="Erweiterte Beschreibung, z.B.: Falls da, bitte glutenfreien Nudeln von Seitz.">
         </form>
 
         <ul id="list">
-            <li v-for="(product, index) in products" :key="index">
-                {{product}}
+            <li v-for="(product, index) in $store.state.editShopingListModule.items" :key="index">
+                {{product.quantity}} {{product.name}}
                 <span class="close" v-on:click="deleteItem(index)">&times;</span>
             </li>
         </ul>
         <div class="publish">
-            <button type="submit">Liste ver&ouml;ffentlichen</button>
+            <button v-on:click="$store.dispatch('editShopingListModule/saveList')">Liste ver&ouml;ffentlichen</button>
         </div>
         
     </div>
@@ -32,35 +32,31 @@ export default Vue.extend({
     //el: '#list', // todo cannot find element list! el kan only be used during instance creation?
     data: function () {
         return {
-            products: [
-                '40 Packungen Toilettenpapier',
-                '3 Bananen',
-                'Pfirsiche'
-            ],
             seen: false,
             supply: "",
-            count: 1,
+            quantity: 1,
             comment: ""
         }
     },
     methods: {
         /*Add products from form to product list*/
         addProduct: function () {
-            let newEntry = "";
+            let name = this.supply;
             if (this.seen) {
-                newEntry = this.count + " " + this.supply + " (" + this.comment + ")";
-            } else {
-                newEntry = this.count + " " + this.supply;
-            }
-            this.products.push(newEntry);
+                name = name + " (" + this.comment + ")";
+            } 
+            this.$store.commit("editShopingListModule/addItem", {
+                quantity: this.quantity,
+                name: name
+            })
             this.supply = "";
-            this.count = 1;
+            this.quantity = 1;
             this.comment = "";
             this.seen = false;
             return
         },
         deleteItem: function (index) {
-            this.products.splice(index, 1);
+            this.$store.commit("editShopingListModule/removeItem", index)
         }
     }
 })  
