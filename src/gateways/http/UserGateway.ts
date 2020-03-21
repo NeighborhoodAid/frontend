@@ -8,7 +8,7 @@ export class UserGateway {
      */
     login(email: string, password: string): void {
         // ToDo: not finished implemented
-        axios.post('http://.../api/v1//login', {data: {email: email, password: password}});
+        axios.post('http://.../api/v1/login', {data: {email: email, password: password}});
     }
 
     /**
@@ -19,6 +19,6 @@ export class UserGateway {
      */
     signup(email: string, password: string, mailAddress: string, phoneNumber: string): void {
         // ToDo: not finished implemented
-        axios.post('http://.../api/v1//signup', {data: {email: email, password: password, mailAddress: mailAddress, phoneNumber: phoneNumber}});
+        axios.post('http://.../api/v1/signup', {data: {email: email, password: password, mailAddress: mailAddress, phoneNumber: phoneNumber}});
     }
 }
