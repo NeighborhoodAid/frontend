@@ -2,24 +2,21 @@
     <div class="list">
         <h1>Einkaufliste erstellen</h1>
 
-        <div id="myDIV" class="header">
+        <form id="myDIV" class="header">
             <input type="text" id="number" placeholder="3">
             <input type="text" id="supply" placeholder="Bananen">
-            <span onclick="newElement()" class="addBtn">Hinzuf&uuml;gen</span><br />
+            <button type="submit" onclick="newElement()" class="addBtn">Hinzuf&uuml;gen</button><br />
             <div class="checkComment">
                 <input type="checkbox" id="addcomment" name="addcomment" value="HasComment">
                 <label for="addcomment"> Notiz hinzuf&uuml;gen</label><br>
             </div>
             <input type="text" id="comment" placeholder="Die glutenfreien Nudeln von Seitz schmecken am besten. Falls da, bitte diese.">
-        </div>
+        </form>
 
-        <ul id="myUL">
-            <li>4 &Auml;pfel</li>
-            <li class="checked">2 Packungen Nudeln</li>
-            <li>Toilettenpapier</li>
-            <li>1 Packung glutenfreie Nudeln</li>
-            <li>3 Milch</li>
-            <li>&Uuml;berraschungseier</li>
+        <ul id="list">
+            <li  v-for="product in products" :key="product.id">
+                {{product}}
+            </li>
         </ul>
         <div class="publish">
             <button type="submit">Liste ver&ouml;ffentlichen</button>
@@ -31,8 +28,22 @@
 <script>
 import Vue from 'vue'
 export default Vue.extend({
-})
+    el: '#list',
+    data: function () {
+        return {
+            products: [
+                '40 Packungen Toilettenpapier',
+                '3 Bananen',
+                'Pfirsiche'
+            ]
+        }
+    }
+    //methods: {
+
+    //}
+})  
 </script>
+
 
 <style lang="scss" scoped>
 
