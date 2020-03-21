@@ -2,13 +2,12 @@
     <div class="profile-wrapper">
         <div class="profile">
             <img v-bind:src="userimage" class="profile-picture">
-            <h1>{{username}} <img class="icon" src="../assets/pen.svg"></h1>
+            <h1>{{username}} ✏️</h1>
             <div class="profile-menu">
-                <a href="" class="menu-item"><img class="icon" src="../assets/pen.svg"> Passwort ändern</a>
-                <a href="" class="menu-item"><img class="icon" src="../assets/pen.svg"> Banutzername ändern</a>
-                <a href="" class="menu-item"><img class="icon" src="../assets/pen.svg"> E-Mail ändern</a>
-                <a href="" class="menu-item"><img class="icon" src="../assets/pen.svg"> Handynummer ändern</a>
-                <a href="" class="menu-item"><img class="icon" src="../assets/pen.svg"> Konto löschen</a>
+                <a href="" class="menu-item">🔑 Passwort ändern <span class="align-right">✏️</span></a>
+                <a href="" class="menu-item">📧 E-Mail ändern <span class="align-right">✏️</span></a>
+                <a href="" class="menu-item">📞 Handynummer ändern <span class="align-right">✏️</span></a>
+                <a href="" class="menu-item">👤 Konto löschen <span class="align-right">🗑️</span></a>
             </div>
         </div>
     </div>
@@ -33,6 +32,10 @@
         align-items: center;
     }
 
+    .align-right {
+        float: right;
+    }
+
     .profile {
         // margin: 1em;
 
@@ -51,11 +54,15 @@
                 padding: 1em;
                 margin:0 0 1em 0;
                 text-decoration: none;
-                background: #80E6E2;
-                color: #2c3e50;
-                box-shadow: 0px 2px 4px #2c3e50;
+                background: #2c3e50;
+                color: #80E6E2;
                 text-align: left;
-                border-radius: .25em;
+                // border-radius: .25em;
+                transition: .25s;
+
+                &:hover {
+                    box-shadow: 1px 1px 4px #2c3e50;
+                }
             }
         }
 

@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <span v-if="$store.getters['userModule/isLoggedIn']"> <router-link to="/profile">Profile</router-link> | </span>
-      <span v-if="$store.getters['userModule/isLoggedIn']"> <router-link to="/logout">Logout</router-link> </span>
-      <span v-else> <router-link to="/login">Login</router-link></span>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link v-if="$store.getters['userModule/isLoggedIn']" to="/profile">Profile</router-link>
+      <router-link v-if="$store.getters['userModule/isLoggedIn']" to="/logout">Logout</router-link>
+      <router-link v-else to="/login">Login</router-link>
     </div>
     <router-view/>
   </div>
@@ -28,7 +28,7 @@ export default Vue.extend({
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #80E6E2;
+    color: #12CBC4;
     //background: #1289A7;
     
     height: 100%;
@@ -38,11 +38,9 @@ export default Vue.extend({
   }
 
   #nav {
-    background: #80E6E2;
-    box-shadow: 0px 0px 4px #2c3e50;
-    margin: 1em;
-    border-radius: .25em;
+    background: #12CBC4;
     overflow: hidden;
+    flex-shrink: 0;
 
     display: flex;
 
@@ -52,7 +50,7 @@ export default Vue.extend({
       color: #2c3e50;
 
       &.router-link-exact-active {
-        color: #80E6E2;
+        color: #12CBC4;
         background: #2c3e50;
       }
     }
