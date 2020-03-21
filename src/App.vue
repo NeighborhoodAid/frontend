@@ -3,8 +3,9 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/profile">Profile</router-link> |
-      <router-link to="/login">Login</router-link>
+      <span v-if="$store.getters['userModule/isLoggedIn']"> <router-link to="/profile">Profile</router-link> | </span>
+      <span v-if="$store.getters['userModule/isLoggedIn']"> <router-link to="/logout">Logout</router-link> </span>
+      <span v-else> <router-link to="/login">Login</router-link></span>
     </div>
     <router-view/>
   </div>
