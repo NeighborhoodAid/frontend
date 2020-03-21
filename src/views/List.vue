@@ -14,8 +14,9 @@
         </form>
 
         <ul id="list">
-            <li  v-for="(product, index) in products" :key="index">
+            <li v-for="(product, index) in products" :key="index">
                 {{product}}
+                <span class="close" v-on:click="deleteItem(index)">&times;</span>
             </li>
         </ul>
         <div class="publish">
@@ -43,6 +44,7 @@ export default Vue.extend({
         }
     },
     methods: {
+        /*Add products from form to product list*/
         addProduct: function () {
             let newEntry = "";
             if (this.seen) {
@@ -56,6 +58,9 @@ export default Vue.extend({
             this.comment = "";
             this.seen = false;
             return
+        },
+        deleteItem: function (index) {
+            this.products.splice(index, 1);
         }
     }
 })  
