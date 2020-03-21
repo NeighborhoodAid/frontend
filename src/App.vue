@@ -19,6 +19,7 @@ import Vue from 'vue'
 export default Vue.extend({
   mounted: function () {
     this.$store.dispatch("userModule/init");
+    this.$store.dispatch("editShopingListModule/init");
   }
 })
 </script>
