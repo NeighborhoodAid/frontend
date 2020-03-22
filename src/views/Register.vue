@@ -11,18 +11,13 @@
                 <input type="text" placeholder="+49 1234 1234567" id="phone" required>
 
                 <label for="password"><b>Passwort wählen</b></label>
-                <input type="password" placeholder="correct horse battery staple" id="password" required>
+                <input type="password" placeholder="••••••••" id="password" required>
 
                 <input type="checkbox" id="acceptEulaPrivacy" required>
                 <label for="acceptEulaPrivacy"> Ich akzeptiere die Nutzungsbedingungen und die Datenschutzerklärung</label>
 
                 <button type="submit">Registrieren</button>
             </div>
-
-            <div class="container" style="background-color:#f1f1f1">
-                <span class="login"><a href="/login">Login</a></span>
-            </div>
-
         </form>
 
         <div class="container" v-else>
@@ -93,11 +88,6 @@
         background-color: #f1f1f1;
         padding: 16px;
         border: 3px solid #f1f1f1;
-    }
-
-    span.login {
-        float: right;
-        margin-bottom: 3px;
     }
 
     /* Change styles for span and cancel button on extra small screens */

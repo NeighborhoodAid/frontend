@@ -1,7 +1,6 @@
 <template>
     <div class="list">
         <h1>Einkaufsliste mitnehmen</h1>
-
         <ul id="list">
             <li v-for="(product, index) in products" :class="checkedProducts.includes(product) ? 'checked' : '' " :key="index" v-on:click="checkItem(product)">
                 {{product}}
