@@ -9,8 +9,8 @@
         <router-link style="margin-left: auto;" to="/logout"><font-awesome-icon icon="user" fixed-width /> Logout</router-link>
       </template>
       <template v-else>
-        <router-link style="margin-left: auto; float: right;" to="/login"><font-awesome-icon icon="user" fixed-width /> Login</router-link>
-        <router-link style="float: right;" to="/register"><font-awesome-icon icon="user-plus" fixed-width /> Registrieren</router-link>
+        <router-link :style="menuOpen ? '' : 'float: right;'" to="/login"><font-awesome-icon icon="user" fixed-width /> Login</router-link>
+        <router-link :style="menuOpen ? '' : 'float: right;'" to="/register"><font-awesome-icon icon="user-plus" fixed-width /> Registrieren</router-link>
       </template>
       <a href="javascript:void(0);" class="icon" v-on:click="mobileMenu()">
           <i class="fa fa-bars"></i>
@@ -49,19 +49,18 @@ export default Vue.extend({
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-  #app {
-    font-family: 'Raleway', Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #12CBC4;
-    //background: #1289A7;
-
-    height: 100%;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-  }
+    #app {
+        font-family: 'Raleway', Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #12CBC4;
+        //background: #1289A7;
+        height: 100%;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+    }
 
 
   #placeholderBehindNavbar {
