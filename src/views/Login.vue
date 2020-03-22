@@ -18,7 +18,9 @@
 
             <div class="container" style="background-color:#f1f1f1">
                 <span class="psw"><a href="#">Passwort vergessen</a>?</span>
+                <span class="register"><a href="/register">Account erstellen</a></span>
             </div>
+
         </form>
     </div>
 </template>
@@ -91,6 +93,11 @@ export default Vue.extend({
     span.psw {
       float: right;
       margin-bottom: 3px;
+    }
+
+    span.register {
+        float: left;
+        margin-bottom: 3px;
     }
 
     /* Change styles for span and cancel button on extra small screens */
