@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Startseite</router-link>
+      <router-link to="/about">Über uns</router-link>
       <router-link v-if="$store.getters['userModule/isLoggedIn']" to="/profile">Profile</router-link>
       <router-link v-if="$store.getters['userModule/isLoggedIn']" to="/createList">Liste erstellen</router-link>
-      <router-link v-if="$store.getters['userModule/isLoggedIn']" to="/buyList">Liste kaufen</router-link>
+      <router-link v-if="$store.getters['userModule/isLoggedIn']" to="/buyList">Liste erledigen</router-link>
       <router-link v-if="$store.getters['userModule/isLoggedIn']" to="/logout">Logout</router-link>
       <router-link v-else to="/login">Login</router-link>
     </div>
@@ -53,7 +53,7 @@ export default Vue.extend({
       color: #2c3e50;
 
       &.router-link-exact-active {
-        color: #12CBC4;
+        color: #fff;
         background: #2c3e50;
       }
     }
