@@ -14,7 +14,7 @@
       </template>
     </div>
     <transition name="fade" mode="out-in">
-      <router-view/>
+      <router-view style="padding-bottom: 80px;"/>
     </transition>
     <div id="footer">
       &copy; NeighborhoodAid Team 2020 - Alle Rechte vorbehalten.
