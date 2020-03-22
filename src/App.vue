@@ -9,8 +9,8 @@
         <router-link style="margin-left: auto;" to="/logout"><font-awesome-icon icon="user" fixed-width /> Logout</router-link>
       </template>
       <template v-else>
-        <router-link :style="menuOpen ? '' : 'float: right;'" to="/login"><font-awesome-icon icon="user" fixed-width /> Login</router-link>
-        <router-link :style="menuOpen ? '' : 'float: right;'" to="/register"><font-awesome-icon icon="user-plus" fixed-width /> Registrieren</router-link>
+        <router-link :style="menuOpen ? '' : 'margin-left: auto; float: right;'" to="/login"><font-awesome-icon icon="user" fixed-width /> Login</router-link>
+        <router-link :style="menuOpen ? '' : 'margin-left: auto;float: right;'" to="/register"><font-awesome-icon icon="user-plus" fixed-width /> Registrieren</router-link>
       </template>
       <a href="javascript:void(0);" class="icon" v-on:click="mobileMenu()">
           <i class="fa fa-bars"></i>
@@ -63,9 +63,9 @@ export default Vue.extend({
     }
 
 
-  #placeholderBehindNavbar {
-      min-height: 50px
-  }
+    #placeholderBehindNavbar {
+        min-height: 50px
+    }
   
   .nav {
     background: #12CBC4;
