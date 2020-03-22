@@ -5,7 +5,9 @@
         <form id="myDIV" class="header" @submit.prevent="addProduct()">
             <input type="text" id="count" placeholder="3" v-model="quantity">
             <input type="text" id="name" required placeholder="Artikelname" v-model="supply">
-            <button type="submit" class="addBtn">Hinzuf&uuml;gen</button><br />
+            <button id="addBtn1" type="submit" class="addBtn">Hinzuf&uuml;gen</button>
+            <!--second smaller button for mobile view-->
+            <button id="addBtn2" type="submit" class="addBtn"><b>+</b></button><br />
             <div class="checkComment">
                 <input type="checkbox" id="addcomment" name="addcomment" v-model="seen">
                 <label for="addcomment"> Notiz hinzuf&uuml;gen</label><br>
@@ -96,7 +98,6 @@ export default Vue.extend({
         border: none;
         cursor: pointer;
         width: 100%;
-        //float: right;
     }
 
     button:hover {
@@ -111,6 +112,10 @@ export default Vue.extend({
     @media screen and (max-width: 600px) {
         .list {
             padding: 0 5% 0 5%;
+        }
+
+        button {
+
         }
     }
 
@@ -215,7 +220,6 @@ export default Vue.extend({
     /*number of things to buy*/
     #count {
         width: 10%;
-        min-width: 40px;
     }
 
     /*thing to buy*/
@@ -233,7 +237,6 @@ export default Vue.extend({
         padding: 10px;
         padding-top: 11px;
         width: 25%;
-        min-width: 110px;
         background: #d9d9d9;
         color: #555;
         float: left;
@@ -243,6 +246,33 @@ export default Vue.extend({
         transition: 0.3s;
         border-radius: 0px;
         margin: 0px;
+    }
+
+    #addBtn1 {
+        min-width: 110px;
+    }
+
+    #addBtn2 {
+        min-width: 40px;
+        display: none;
+    }
+
+    /*use smaller addBtn2 button in mobile view*/
+    @media screen and (max-width: 870px) {
+        #addBtn1 {
+            display: none;
+        }
+        #addBtn2 {
+            display: block;
+            padding: 10px 5px 10px 5px;
+            width: 10%;
+        }
+        #count {
+            width: 20%;
+        }
+        #name {
+            width: 60%;
+        }
     }
 
     .addBtn:hover {
