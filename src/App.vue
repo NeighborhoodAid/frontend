@@ -17,7 +17,6 @@
       </a>
     </div>
     <div id="placeholderBehindNavbar"></div>
-    <router-view/>
     <transition name="fade" mode="out-in">
       <router-view style="padding-bottom: 80px;"/>
     </transition>
