@@ -4,11 +4,11 @@
   <strong>Ein Projekt für den #WirVsVirus Hackathons der Bundesregierung</strong>
 </div>
 <p align="center">
-  <a href="https://github.com/NeighborhoodAid/Server/stargazers">
-    <img src="https://img.shields.io/github/stars/NeighborhoodAid/Server.svg?style=plasticr" alt="stars">
+  <a href="https://github.com/NeighborhoodAid/frontend/stargazers">
+    <img src="https://img.shields.io/github/stars/NeighborhoodAid/frontend.svg?style=plasticr" alt="stars">
   </a>
-  <a href="https://github.com/NeighborhoodAid/Server/commits/master">
-    <img src="https://img.shields.io/github/last-commit/NeighborhoodAid/Server.svg?style=plasticr" alt="commits">
+  <a href="https://github.com/NeighborhoodAid/frontend/commits/master">
+    <img src="https://img.shields.io/github/last-commit/NeighborhoodAid/frontend.svg?style=plasticr" alt="commits">
   </a>
 </p>
 
