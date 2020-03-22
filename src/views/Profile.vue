@@ -2,12 +2,12 @@
   <div class="profile-wrapper">
     <div class="profile">
       <img v-bind:src="userimage" class="profile-picture">
-      <h1>{{username}} ✏️</h1>
+      <h1>{{username}} <font-awesome-icon icon="edit" fixed-width /></h1>
       <div class="profile-menu">
-        <a href="" class="menu-item">🔑 Passwort ändern <span class="align-right">✏️</span></a>
-        <a href="" class="menu-item">📧 E-Mail ändern <span class="align-right">✏️</span></a>
-        <a href="" class="menu-item">📞 Handynummer ändern <span class="align-right">✏️</span></a>
-        <a href="" class="menu-item">👤 Konto löschen <span class="align-right">🗑️</span></a>
+        <a href="" class="menu-item"><font-awesome-icon icon="key" fixed-width /> Passwort ändern <span class="align-right"><font-awesome-icon icon="edit" fixed-width /></span></a>
+        <a href="" class="menu-item"><font-awesome-icon icon="envelope" fixed-width /> E-Mail ändern <span class="align-right"><font-awesome-icon icon="edit" fixed-width /></span></a>
+        <a href="" class="menu-item"><font-awesome-icon icon="phone" fixed-width /> Telefonnummer ändern <span class="align-right"><font-awesome-icon icon="edit" fixed-width /></span></a>
+        <a href="" class="menu-item"><font-awesome-icon icon="user-times" fixed-width /> Konto löschen <span class="align-right"><font-awesome-icon icon="trash-alt" fixed-width /></span></a>
       </div>
     </div>
   </div>
@@ -17,8 +17,8 @@
   export default {
     data() {
       return {
-        username: 'Max Mustermann',
-        userimage: require('../assets/triangle.jpg'),
+        username: 'Harold Schmidt',
+        userimage: require('../assets/harold.png'),
         email: 'max.mustermann@example.com',
         number: '+49123456789'
       };
@@ -59,7 +59,7 @@
         background: #80e6e2;
         color: #2c3e50;
         text-align: left;
-        // border-radius: .25em;
+        border-radius: .25em;
         transition: .25s;
 
         &:hover {
