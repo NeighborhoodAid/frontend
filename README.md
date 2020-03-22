@@ -12,7 +12,7 @@
   </a>
 </p>
 
-# Frontend-Repository von NeighborAid
+# Frontend-Repository von NeighborhoodAid
 
 ## Projekt Set-Up
 ```
