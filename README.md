@@ -1,7 +1,7 @@
 <div align="center">
-  <img alt="Header" src="https://i.imgur.com/6MnFlEn.png" width="500px">
+  <img alt="Header" src="https://lh3.googleusercontent.com/u/0/d/1vqtzHS0mkJbLiJT9Q6yPeBtzpJPGXkey=w1920-h966-iv1" width="500px">
     <h1>Nachbarschaftshilfe leicht gemacht :house: :raising_hand:</h1>
-  <strong>Ein Projekt für den #WirVsVirus Hackathons der Bundesregierung</strong>
+  <strong>Ein Projekt für den <a href="https://wirvsvirushackathon.org/">#WirVsVirus</a> Hackathon der Bundesregierung</strong>
 </div>
 <p align="center">
   <a href="https://github.com/NeighborhoodAid/frontend/stargazers">
@@ -16,23 +16,27 @@
 
 Alle Information zu NeighborhoodAid findest du [hier](https://github.com/NeighborhoodAid/server#was-ist-neighborhoodaid).
 
+## Inhalt
 
-## Projekt Set-Up
+- [Was ist NeighborhoodAid?](#was-ist-neighborhoodaid)
+- [Inhalt](#inhalt)
+- [Installation](#installation)
+  - [Insallieren von Abhängigkeiten](#insallieren-von-abh%c3%a4ngigkeiten)
+  - [Starten des Frontends](#starten-des-frontends)
+  - [Kompilation und Minifizierung für die Auslieferung](#kompilation-und-minifizierung-f%c3%bcr-die-auslieferung)
+- [Features](#features)
+- [Benutzte Software](#benutzte-software)
+- [Mitentwickler](#mitentwickler)
+
+
+## Installation
+
+### Insallieren von Abhängigkeiten
 ```
 yarn install
 ```
 
-### Kompilation und hot-reloads für den Entwicklungsserver mit Backend Server
-#### Laden Sie die aktuelle Version des Backend-Servers herunter ####
-```
-https://github.com/NeighborhoodAid/Server/releases
-```
-#### Starten Sie den Backend-Server ####
-```
-java -jar Server-{version}-shaded.jar
-```
-
-### Anschließen starten Sie das 'Frontend'
+### Starten des Frontends
 ```
 yarn serve
 ```
@@ -42,10 +46,24 @@ yarn serve
 yarn build
 ```
 
-### Lints und Dateibehebungen anwenden
-```
-yarn lint
-```
+## Features
 
-### Konfigurationsbearbeitung
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Die Features sind [hier](https://github.com/NeighborhoodAid/server#features) aufgelistet.
+
+## Benutzte Software
+ 
+- [Vue](https://vuejs.org/) 
+- [Fontawesome](https://fontawesome.com/)
+
+## Mitentwickler 
+
+- [Dario Götze](https://github.com/Dudeplayz)
+- [Dennis Schuster](https://github.com/Dennisschu)
+- [iBiber](https://github.com/iBiber)
+- [Lennart Sommerfeld](https://github.com/delorie)
+- [Nathan](https://github.com/NathanNr)
+- [Marcel Piehler](https://github.com/marcel-piehler)
+- [Niklas Marion](https://github.com/Biospheere)
+- [Robin Lindner](https://github.com/deeprobin)
+- [Roman Gräf](https://github.com/romangraef)
+- [Sophie Altenburg](https://github.com/SophieAltenburg)
