@@ -3,7 +3,7 @@ import {UserModel} from "@/models/user.model";
 
 export class ServerGateway {
 
-    private readonly BASE_URL = 'http://.../api/v1/';
+    private readonly BASE_URL = 'http://.../api/v1';
     private readonly TIMEOUT  = 1000;
 
     constructor(private user: UserModel|null = null) {}

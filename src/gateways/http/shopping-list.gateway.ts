@@ -9,7 +9,7 @@ export class ShoppingListGateway {
 
     getList(identifier: string): void {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstance().get('http://.../api/v1/list/'+identifier).then((response) => {
+        this.httpClient.getHttpInstance().get('/list/'+identifier).then((response) => {
 
             let articleList = [];
             for (let articleItem of response.data.articles) {
@@ -32,21 +32,21 @@ export class ShoppingListGateway {
 
     create(): void {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstance().post('http://.../api/v1/list', {data: {}});
+        this.httpClient.getHttpInstance().post('/list', {data: {}});
     }
 
     update(identifier: string) : void {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstance().put('http://.../api/v1/list/'+identifier, {data: {}});
+        this.httpClient.getHttpInstance().put('/list/'+identifier, {data: {}});
     }
 
     claim(identifier: string): void  {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstance().post('http://.../api/v1/list/'+identifier+'/claim', {data: {}});
+        this.httpClient.getHttpInstance().post('/list/'+identifier+'/claim', {data: {}});
     }
 
     delete(identifier: string): void {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstance().delete('http://.../api/v1/list/'+identifier);
+        this.httpClient.getHttpInstance().delete('/list/'+identifier);
     }
 }
