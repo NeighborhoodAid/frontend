@@ -1,6 +1,7 @@
 <template>
     <div class="logout">
-        <h1>Vielen Dank für Ihren Besuch</h1>
+        <div class="placeholder"></div>
+        <h1>Vielen Dank für Ihren Besuch!</h1>
     </div>
 </template>
 
@@ -10,6 +11,12 @@ export default Vue.extend({
   
 })
 </script>
+
+<style>
+    .placeholder {
+        min-height: 50px;
+    }
+</style>
 
 <style lang="scss" scoped>
     

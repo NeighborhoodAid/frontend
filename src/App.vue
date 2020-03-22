@@ -65,7 +65,7 @@ export default Vue.extend({
 
 
   #placeholderBehindNavbar {
-      height: 30px;
+      min-height: 50px
   }
   
   .nav {
