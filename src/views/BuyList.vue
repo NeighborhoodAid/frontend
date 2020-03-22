@@ -1,7 +1,6 @@
 <template>
     <div class="list">
-        <h1>Einkaufliste erledigen</h1>
-
+        <h1>Einkaufsliste mitnehmen</h1>
         <ul id="list">
             <li v-for="(product, index) in products" :class="checkedProducts.includes(product) ? 'checked' : '' " :key="index" v-on:click="checkItem(product)">
                 {{product}}
@@ -72,10 +71,10 @@ export default Vue.extend({
         margin: 5px;
     }
 
-
     .publish {
         padding: 30px 40px;
         text-align: center;
+        width: 100%;
     }
 
     button {
@@ -86,7 +85,7 @@ export default Vue.extend({
         margin: 8px 0;
         border: none;
         cursor: pointer;
-        width: 30%;
+        width: 100%;
         float: right;
     }
 
@@ -97,6 +96,14 @@ export default Vue.extend({
     .list {
         padding: 0 20% 0 20%;
     }
+
+    /*Make list fill the whole screen on a phone*/
+    @media screen and (max-width: 600px) {
+        .list {
+            padding: 0 5% 0 5%;
+        }
+    }
+
     /* Include the padding and border in an element's total width and height */
     * {
         box-sizing: border-box;

@@ -46,9 +46,17 @@
 </script>
 
 <style lang="scss" scoped>
+    
     .register {
         margin: 0 25% 0 25%;
         max-width: 50%;
+    }
+
+    /*make larger on mobile*/
+    @media screen and (max-width: 600px) {
+        .register {
+            margin: 0 5% 0 5%;
+        }
     }
 
     form {border: 3px solid #f1f1f1;}

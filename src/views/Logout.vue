@@ -26,6 +26,12 @@ export default Vue.extend({
 })
 </script>
 
+<style>
+    .placeholder {
+        min-height: 50px;
+    }
+</style>
+
 <style lang="scss" scoped>
 a {
     color: #12CBC4;

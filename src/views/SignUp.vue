@@ -47,9 +47,16 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 
-    .login {
+    .signup {
         margin: 0 25% 0 25%;
         max-width: 50%;
+    }
+
+    /*make larger on mobile*/
+    @media screen and (max-width: 600px) {
+        .signup {
+            margin: 0 5% 0 5%;
+        }
     }
 
     form {border: 3px solid #f1f1f1;}

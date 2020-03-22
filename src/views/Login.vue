@@ -58,6 +58,14 @@ export default Vue.extend({
         max-width: 50%;
     }
 
+    /*make larger on mobile*/
+    @media screen and (max-width: 600px) {
+        .login {
+            margin: 0 5% 0 5%;
+            max-width: 100%;
+        }
+    }
+
     form {border: 3px solid #f1f1f1;}
 
     input[type=text], input[type=password] {
