@@ -2,16 +2,15 @@
   <div id="app">
     <div class="nav">
       <router-link to="/"><font-awesome-icon icon="home" fixed-width /> Startseite</router-link>
-      <router-link to="/about"><font-awesome-icon icon="info" fixed-width /> Über uns</router-link>
       <template v-if="$store.getters['userModule/isLoggedIn']">
-        <router-link to="/profile"><font-awesome-icon icon="user-edit" fixed-width /> Profile</router-link>
+        <router-link to="/profile"><font-awesome-icon icon="user-edit" fixed-width /> Profil</router-link>
         <router-link to="/createList"><font-awesome-icon icon="cart-plus" fixed-width /> Liste erstellen</router-link>
         <router-link to="/buyList"><font-awesome-icon icon="check" fixed-width /> Liste erledigen</router-link>
         <router-link style="margin-left: auto;" to="/logout"><font-awesome-icon icon="user" fixed-width /> Logout</router-link>
       </template>
       <template v-else>
-        <router-link to="/login"><font-awesome-icon icon="user" fixed-width /> Login</router-link>
-        <router-link to="/register"><font-awesome-icon icon="user-plus" fixed-width /> Registrieren</router-link>
+        <router-link style="margin-left: auto; float: right;" to="/login"><font-awesome-icon icon="user" fixed-width /> Login</router-link>
+        <router-link style="float: right;" to="/register"><font-awesome-icon icon="user-plus" fixed-width /> Registrieren</router-link>
       </template>
     </div>
     <router-view/>
