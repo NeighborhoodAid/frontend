@@ -21,7 +21,7 @@ Alle Information zu NeighborhoodAid findest du [hier](https://github.com/Neighbo
 - [Was ist NeighborhoodAid?](#was-ist-neighborhoodaid)
 - [Inhalt](#inhalt)
 - [Installation](#installation)
-  - [Insallieren von Abhängigkeiten](#insallieren-von-abh%c3%a4ngigkeiten)
+  - [Installieren von Abhängigkeiten](#installieren-von-abh%c3%a4ngigkeiten)
   - [Starten des Frontends](#starten-des-frontends)
   - [Kompilation und Minifizierung für die Auslieferung](#kompilation-und-minifizierung-f%c3%bcr-die-auslieferung)
 - [Features](#features)
@@ -31,7 +31,7 @@ Alle Information zu NeighborhoodAid findest du [hier](https://github.com/Neighbo
 
 ## Installation
 
-### Insallieren von Abhängigkeiten
+### Installieren von Abhängigkeiten
 ```
 yarn install
 ```
