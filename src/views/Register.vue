@@ -10,8 +10,8 @@
                 <label for="phone"><b>Handynummer</b></label>
                 <input type="text" placeholder="+49 1234 1234567" id="phone" required>
 
-                <label for="password"><b>Passwort wählen</b></label>
-                <input type="password" placeholder="correct horse battery staple" id="password" required>
+                <label for="password"><b>Kennwort wählen</b></label>
+                <input type="password" placeholder="Sollte sicher sein" id="password" required>
 
                 <input type="checkbox" id="acceptEulaPrivacy" required>
                 <label for="acceptEulaPrivacy"> Ich akzeptiere die Nutzungsbedingungen und die Datenschutzerklärung</label>
@@ -20,7 +20,7 @@
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <span class="login"><a href="/login">Login</a></span>
+                <span class="login"><a href="/login">Ich habe bereits ein Konto</a></span>
             </div>
 
         </form>

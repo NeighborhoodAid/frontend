@@ -17,7 +17,7 @@
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <span class="psw"><a href="#">Passwort vergessen</a>?</span>
+                <span class="psw"><a href="#">Passwort vergessen?</a></span>
                 <span class="register"><a href="/register">Account erstellen</a></span>
             </div>
 
