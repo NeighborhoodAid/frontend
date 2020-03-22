@@ -13,7 +13,7 @@ export class ShoppingListGateway {
 
             let articleList = [];
             for (let articleItem of response.data.articles) {
-                articleList.push(new ArticleModel(articleItem.amount, articleItem.title, articleItem.description))
+                articleList.push(new ArticleModel(articleItem.amount, articleItem.title, articleItem.description, articleItem.done))
             }
 
             const shoppingList = new ShoppingListModel(
