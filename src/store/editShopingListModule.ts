@@ -24,27 +24,6 @@ const editShopingListModule = {
         }
     },
     actions: {
-        init: function({ commit }: any) {
-            // Fill some dummy values
-            const newItem = {
-                quantity: 40,
-                name: "Packungen Toilettenpapier"
-            } as ShoppingListItem
-            commit("addItem", newItem)
-
-            const newItems = [
-                {
-                    quantity: 3,
-                    name: "Bananen (möglichst grün)"
-                },
-                {
-                    quantity: 1,
-                    name: "Paket Pfirsiche"
-                }
-            ] as ShoppingListItem[]
-
-            commit("addItems", newItems)
-        },
         loadList: function({ commit }: any, id: string){
             // FIXME: Load list from REST call
         },
