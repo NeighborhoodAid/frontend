@@ -1,25 +1,44 @@
+import {ArticleModel} from "@/models/article.model";
 
-export class ArticleModel {
+export class ShoppingListModel {
 
-    private readonly _amount:         number;
-    private readonly _title:          string;
-    private readonly _description:    string;
+    private readonly _identifier:       string;
+    private readonly _creator:          string;
+    private readonly _claimer:          string;
+    private readonly _creationDateTime: string;
+    private readonly _dueDateTime:      string;
+    private readonly _articles:         ArticleModel[]; // Add new item over State management
 
-    constructor(amount: number, title: string, description: string) {
-        this._amount        = amount;
-        this._title         = title;
-        this._description   = description;
+    constructor(identifier: string, creator: string, claimer: string, creationDateTime: string, dueDateTime: string, articles: ArticleModel[]) {
+        this._identifier        = identifier;
+        this._creator           = creator;
+        this._claimer           = claimer;
+        this._creationDateTime  = creationDateTime;
+        this._dueDateTime       = dueDateTime;
+        this._articles          = articles;
     }
 
-    get amount(): number {
-        return this._amount;
+    get identifier(): string {
+        return this._identifier;
     }
 
-    get title(): string {
-        return this._title;
+    get creator(): string {
+        return this._creator;
     }
 
-    get description(): string {
-        return this._description;
+    get claimer(): string {
+        return this._claimer;
+    }
+
+    get creationDateTime(): string {
+        return this._creationDateTime;
+    }
+
+    get dueDateTime(): string {
+        return this._dueDateTime;
+    }
+
+    get articles(): ArticleModel[] {
+        return this._articles;
     }
 }
