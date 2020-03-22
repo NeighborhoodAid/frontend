@@ -105,7 +105,7 @@ export default Vue.extend({
 
     @media screen and (max-width: 600px) {
         .nav.responsive {
-            position: relative;
+            position: fixed;
             z-index: 1;
         }
 

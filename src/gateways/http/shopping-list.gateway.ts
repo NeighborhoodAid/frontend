@@ -5,7 +5,7 @@ export class ShoppingListGateway {
 
     constructor(private httpClient: ServerGateway) {}
 
- /*   getList(identifier: string, user: UserModel): void {
+    getList(identifier: string, user: UserModel): void {
         // ToDo: not finished implemented
         this.httpClient.getHttpInstanceForUser(user).get('http://.../api/v1/list/'+identifier);
     }
@@ -28,5 +28,5 @@ export class ShoppingListGateway {
     delete(identifier: string, user: UserModel): void {
         // ToDo: not finished implemented
         this.httpClient.getHttpInstanceForUser(user).delete('http://.../api/v1/list/'+identifier);
-    }*/
+    }
 }

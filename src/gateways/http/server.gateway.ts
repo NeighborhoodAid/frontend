@@ -1,4 +1,4 @@
-//import axios, { AxiosInstance } from 'axios';
+import axios, { AxiosInstance } from 'axios';
 import {UserModel} from "@/models/user.model";
 
 export class ServerGateway {
@@ -8,7 +8,7 @@ export class ServerGateway {
 
     constructor() {}
 
-/*    public getHttpInstance(): AxiosInstance {
+    public getHttpInstance(): AxiosInstance {
         return axios.create({
             baseURL: this.BASE_URL,
             timeout: this.TIMEOUT,
@@ -21,5 +21,5 @@ export class ServerGateway {
             timeout: this.TIMEOUT,
             headers: {'Authorization': user.identifier}
         })
-    }*/
+    }
 }
