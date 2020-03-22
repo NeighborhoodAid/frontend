@@ -103,7 +103,7 @@ export default Vue.extend({
   }
 
   /*resizing navbar in smaller PC window*/
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 660px) {
         .nav a:not(:first-child) {
             display: none;
         }
@@ -114,7 +114,7 @@ export default Vue.extend({
         }
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 660px) {
         .nav.responsive {
             position: fixed;
             z-index: 1;
