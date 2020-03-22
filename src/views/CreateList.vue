@@ -96,8 +96,8 @@ export default Vue.extend({
         margin: 8px 0;
         border: none;
         cursor: pointer;
-        width: 30%;
-        float: right;
+        width: 100%;
+        //float: right;
     }
 
     button:hover {
