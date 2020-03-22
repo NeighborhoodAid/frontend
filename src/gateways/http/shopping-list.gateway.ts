@@ -11,8 +11,8 @@ export class ShoppingListGateway {
         // ToDo: not finished implemented
         this.httpClient.getHttpInstance().get('/list/'+identifier).then((response) => {
 
-            let articleList = [];
-            for (let articleItem of response.data.articles) {
+            const articleList = [];
+            for (const articleItem of response.data.articles) {
                 articleList.push(new ArticleModel(articleItem.amount, articleItem.title, articleItem.description, articleItem.done))
             }
 
@@ -35,7 +35,7 @@ export class ShoppingListGateway {
         this.httpClient.getHttpInstance().post('/list', {data: {}});
     }
 
-    update(identifier: string) : void {
+    update(identifier: string): void {
         // ToDo: not finished implemented
         this.httpClient.getHttpInstance().put('/list/'+identifier, {data: {}});
     }
