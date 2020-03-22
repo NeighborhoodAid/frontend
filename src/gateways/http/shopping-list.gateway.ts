@@ -7,26 +7,26 @@ export class ShoppingListGateway {
 
     getList(identifier: string, user: UserModel): void {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstanceForUser(user).get('http://.../api/v1/list/'+identifier);
+        this.httpClient.getHttpInstance().get('http://.../api/v1/list/'+identifier);
     }
 
     create(user: UserModel): void {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstanceForUser(user).post('http://.../api/v1/list', {data: {}});
+        this.httpClient.getHttpInstance().post('http://.../api/v1/list', {data: {}});
     }
 
     update(identifier: string, user: UserModel) : void {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstanceForUser(user).put('http://.../api/v1/list/'+identifier, {data: {}});
+        this.httpClient.getHttpInstance().put('http://.../api/v1/list/'+identifier, {data: {}});
     }
 
     claim(identifier: string, user: UserModel): void  {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstanceForUser(user).post('http://.../api/v1/list/'+identifier+'/claim', {data: {}});
+        this.httpClient.getHttpInstance().post('http://.../api/v1/list/'+identifier+'/claim', {data: {}});
     }
 
     delete(identifier: string, user: UserModel): void {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstanceForUser(user).delete('http://.../api/v1/list/'+identifier);
+        this.httpClient.getHttpInstance().delete('http://.../api/v1/list/'+identifier);
     }
 }
