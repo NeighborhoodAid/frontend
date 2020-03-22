@@ -13,7 +13,10 @@
         <router-link style="float: right;" to="/register"><font-awesome-icon icon="user-plus" fixed-width /> Registrieren</router-link>
       </template>
     </div>
-    <router-view/>
+    <transition name="fade" mode="out-in">
+      <router-view/>
+    </transition>
+
   </div>
 </template>
 
@@ -36,8 +39,6 @@ export default Vue.extend({
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #12CBC4;
-    //background: #1289A7;
-
     height: 100%;
     overflow: auto;
     display: flex;

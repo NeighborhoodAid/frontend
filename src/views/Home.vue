@@ -3,18 +3,18 @@
     <h1>NeighborhoodAid</h1>
     <hr/>
     <div class="description">
-      <div><h2>Was ist NeighborhoodAid?</h2>
       <div>
-      NeighborhoodAid ist eine Anwendung, die es Menschen, welche nicht selbst einkaufen können, weil sie zum Beispiel zur Risikogruppe für 
-      <a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Risikobewertung.html">COVID-19</a>, SARS oder andere Krankheiten gehören, ermöglicht, ihren Einkaufszettel online auf unserer Webseite zu erstellen. Über unsere Webseite haben andere Personen, welche helfen wollen, dann die Möglichkeit Einkaufslisten von betroffenen Personen in der Nähe zu sehen und den Einkauf für diese zu erledigen.
-      </div>
-      </div>
-      <div>
-        <h2>Wie ist dieses Projekt entstanden?</h2>
+        <h2>Was ist NeighborhoodAid?</h2>
         <div>
-        <a href="https://wirvsvirushackathon.org/" target="_blank" rel="noopener">
-          <img src="../assets/wirvsvirus.png" alt="Hackathon der Bundesregierung mit dem Slogan #wirvscorona"/>
-        </a>
+        NeighborhoodAid ist eine Anwendung, die es Menschen, welche nicht selbst einkaufen können, weil sie zum Beispiel zur Risikogruppe für 
+        <a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Risikobewertung.html">COVID-19</a>, SARS oder andere Krankheiten gehören, ermöglicht, ihren Einkaufszettel online auf unserer Webseite zu erstellen. Über unsere Webseite haben andere Personen, welche helfen wollen, dann die Möglichkeit Einkaufslisten von betroffenen Personen in der Nähe zu sehen und den Einkauf für diese zu erledigen.
+        </div>
+      </div>
+      <div>
+        <div>
+          <a href="https://wirvsvirushackathon.org/" target="_blank" rel="noopener">
+            <img src="../assets/wirvsvirus_alt.png" alt="Hackathon der Bundesregierung mit dem Slogan #wirvscorona"/>
+          </a>
         </div>
       </div>
       <div>
@@ -59,6 +59,10 @@ export default {
   h2 {
     margin-left: 4vw;
     font-weight: 900;
+  }
+
+  img {
+    max-width: 100%;
   }
 }
 </style>
