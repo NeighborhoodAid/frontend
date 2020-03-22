@@ -44,6 +44,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+a {
+    color: #12CBC4;
+}
+
 .description {
   font-weight: 600;
   text-align: left;
