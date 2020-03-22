@@ -11,6 +11,7 @@
         </div>
       </div>
       <div>
+        <h2>Wie ist das Projekt zustande gekommen?</h2>
         <div>
           <a href="https://wirvsvirushackathon.org/" target="_blank" rel="noopener">
             <img src="../assets/wirvsvirus_alt.png" alt="Hackathon der Bundesregierung mit dem Slogan #wirvscorona"/>

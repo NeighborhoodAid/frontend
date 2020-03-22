@@ -16,7 +16,12 @@
     <transition name="fade" mode="out-in">
       <router-view/>
     </transition>
-
+    <div id="footer">
+      &copy; NeighborhoodAid Team 2020 - Alle Rechte vorbehalten.
+      <span class="badges">
+        <img src="./assets/wirvsvirus_white.svg"/>
+      </span>
+    </div>
   </div>
 </template>
 
@@ -74,5 +79,30 @@ export default Vue.extend({
   body, html {
     margin: 0;
     height: 100%;
+  }
+
+  #footer {
+    background-color: #34495e;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    //padding: 1rem;
+    text-align: left;
+    padding-top: 10px;
+    font-size: 16px;
+    padding-left: 12px;
+
+    .badges {
+      margin: auto;
+      padding-top: -10px;
+      img {
+        height: 32pt;
+        margin-right: 3pt;
+        margin-bottom: 10px;
+        float: right;
+      }
+    }
   }
 </style>
