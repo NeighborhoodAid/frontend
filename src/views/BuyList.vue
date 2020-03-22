@@ -1,6 +1,6 @@
 <template>
     <div class="list">
-        <h1>Einkaufliste erstellen</h1>
+        <h1>Einkaufliste erledigen</h1>
 
         <ul id="list">
             <li v-for="(product, index) in products" :class="checkedProducts.includes(product) ? 'checked' : '' " :key="index" v-on:click="checkItem(product)">

@@ -8,17 +8,16 @@
                 <input v-model="email" type="text" placeholder="max.mustermann@gmx.de" name="email" required>
 
                 <label for="psw"><b>Passwort</b></label>
-                <input v-model="password" type="password" placeholder="Passwort" name="psw" required>
+                <input v-model="password" type="password" placeholder="••••••••" name="psw" required>
 
-                <button type="submit">Anmelden</button>
                 <label>
                     <input v-model="stayLoggedIn" type="checkbox" checked="checked" name="remember"> Angemeldet bleiben
                 </label>
+                <button type="submit">Anmelden</button>
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <span class="psw"><a href="#">Passwort vergessen?</a></span>
-                <span class="register"><a href="/register">Account erstellen</a></span>
+                <span class="psw"><a href="#">Passwort vergessen</a>?</span>
             </div>
 
         </form>
@@ -93,6 +92,10 @@ export default Vue.extend({
     span.psw {
       float: right;
       margin-bottom: 3px;
+
+      a {
+        color: inherit;
+      }
     }
 
     span.register {
