@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <div class="nav">
-      <router-link to="/"><font-awesome-icon icon="play" /> Startseite</router-link>
-      <router-link to="/about"><font-awesome-icon icon="info" /> Über uns</router-link>
+      <router-link to="/"><font-awesome-icon icon="home" /> Startseite</router-link>
       <div class="nav" v-if="$store.getters['userModule/isLoggedIn']">
         <router-link to="/profile"><font-awesome-icon icon="user-edit" /> Profile</router-link>
         <router-link to="/createList"><font-awesome-icon icon="cart-plus" /> Liste erstellen</router-link>

@@ -10,7 +10,7 @@ import * as fa from "@fortawesome/free-solid-svg-icons"
 library.add(fa.faCartPlus)
 library.add(fa.faCheck)
 library.add(fa.faInfo)
-library.add(fa.faPlay)
+library.add(fa.faHome)
 library.add(fa.faUser)
 library.add(fa.faUserEdit)
 library.add(fa.faUserPlus)
