@@ -11,7 +11,7 @@ export class UserGateway {
      */
     login(email: string, password: string): void {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstance().post('http://.../api/v1/login', {data: {email: email, password: password}});
+        this.httpClient.getHttpInstance().post('/login', {data: {email: email, password: password}});
     }
 
     /**
@@ -22,6 +22,6 @@ export class UserGateway {
      */
     signup(email: string, password: string, mailAddress: string, phoneNumber: string): void {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstance().post('http://.../api/v1/signup', {data: {email: email, password: password, mailAddress: mailAddress, phoneNumber: phoneNumber}});
+        this.httpClient.getHttpInstance().post('/signup', {data: {email: email, password: password, mailAddress: mailAddress, phoneNumber: phoneNumber}});
     }
 }

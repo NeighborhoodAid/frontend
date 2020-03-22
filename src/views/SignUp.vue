@@ -1,7 +1,7 @@
 <template>
-    <div class="login">
-        <h1>Login</h1>
-        <form id="login-form" @submit.prevent="onLogin">
+    <div class="signup">
+        <h1>Sign Up</h1>
+        <form id="signup-form" @submit.prevent="onSignUp">
             
             <div class="container">
                 <label for="email"><b>E-Mail Adresse</b></label>
@@ -10,35 +10,28 @@
                 <label for="psw"><b>Passwort</b></label>
                 <input v-model="password" type="password" placeholder="Passwort" name="psw" required>
 
-                <button type="submit">Anmelden</button>
-                <label>
-                    <input v-model="stayLoggedIn" type="checkbox" checked="checked" name="remember"> Angemeldet bleiben
-                </label>
-            </div>
+                <label for="pswr"><b>Passwort bestätigen</b></label>
+                <input v-model="password" type="password" placeholder="Passwort" name="pswr" required>
 
-            <div class="container" style="background-color:#f1f1f1">
-                <span class="psw"><a href="#">Passwort vergessen</a>?</span>
-                <span class="register"><a href="/register">Account erstellen</a></span>
+                <button type="submit">Registrierung abschließen</button>
             </div>
-
         </form>
     </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import router from '../router'
+//import router from '../router'
 export default Vue.extend({
   data: function () {
     return {
     password: ""
   }},
   methods: {
-    onLogin: async function (){
-      await this.$store.dispatch("userModule/login", this.password)
-      router.push("/");
+    onSignUp: async function (){
+      // TODO
     }
-  },
+  }/*,
   computed:{
     email: {
       get () { return this.$store.state.userModule.email },
@@ -48,7 +41,7 @@ export default Vue.extend({
       get () { return this.$store.state.userModule.stayLoggedIn },
       set (value) { this.$store.commit('userModule/setStayLoggedIn', value) }
     }
-  }
+  }*/
 })
 </script>
 
@@ -93,11 +86,6 @@ export default Vue.extend({
     span.psw {
       float: right;
       margin-bottom: 3px;
-    }
-
-    span.register {
-        float: left;
-        margin-bottom: 3px;
     }
 
     /* Change styles for span and cancel button on extra small screens */

@@ -1,32 +1,52 @@
 import {ServerGateway} from "@/gateways/http/server.gateway";
 import {UserModel} from "@/models/user.model";
+import {ShoppingListModel} from "@/models/shopping-list.model";
+import {ArticleModel} from "@/models/article.model";
 
 export class ShoppingListGateway {
 
     constructor(private httpClient: ServerGateway) {}
 
-    getList(identifier: string, user: UserModel): void {
+    getList(identifier: string): void {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstanceForUser(user).get('http://.../api/v1/list/'+identifier);
+        this.httpClient.getHttpInstance().get('/list/'+identifier).then((response) => {
+
+            const articleList = [];
+            for (const articleItem of response.data.articles) {
+                articleList.push(new ArticleModel(articleItem.amount, articleItem.title, articleItem.description, articleItem.done))
+            }
+
+            const shoppingList = new ShoppingListModel(
+                response.data.id,
+                response.data.creator,
+                response.data.claimer,
+                response.data.creationDateTime,
+                response.data.dueDateTime,
+                articleList
+            );
+
+            // add to store
+            // commit("setShoppingLists", shoppingList)
+        });
     }
 
-    create(user: UserModel): void {
+    create(): void {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstanceForUser(user).post('http://.../api/v1/list', {data: {}});
+        this.httpClient.getHttpInstance().post('/list', {data: {}});
     }
 
-    update(identifier: string, user: UserModel) : void {
+    update(identifier: string): void {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstanceForUser(user).put('http://.../api/v1/list/'+identifier, {data: {}});
+        this.httpClient.getHttpInstance().put('/list/'+identifier, {data: {}});
     }
 
-    claim(identifier: string, user: UserModel): void  {
+    claim(identifier: string): void  {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstanceForUser(user).post('http://.../api/v1/list/'+identifier+'/claim', {data: {}});
+        this.httpClient.getHttpInstance().post('/list/'+identifier+'/claim', {data: {}});
     }
 
-    delete(identifier: string, user: UserModel): void {
+    delete(identifier: string): void {
         // ToDo: not finished implemented
-        this.httpClient.getHttpInstanceForUser(user).delete('http://.../api/v1/list/'+identifier);
+        this.httpClient.getHttpInstance().delete('/list/'+identifier);
     }
 }
