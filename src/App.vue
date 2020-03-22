@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <div class="nav">
-      <router-link to="/">Startseite</router-link>
-      <router-link to="/about">Über uns</router-link>
+      <router-link to="/"><font-awesome-icon icon="play" /> Startseite</router-link>
+      <router-link to="/about"><font-awesome-icon icon="info" /> Über uns</router-link>
       <div class="nav" v-if="$store.getters['userModule/isLoggedIn']">
-        <router-link to="/profile">Profile</router-link>
-        <router-link to="/createList">Liste erstellen</router-link>
-        <router-link to="/buyList">Liste erledigen</router-link>
-        <router-link to="/logout">Logout</router-link>
+        <router-link to="/profile"><font-awesome-icon icon="user-edit" /> Profile</router-link>
+        <router-link to="/createList"><font-awesome-icon icon="cart-plus" /> Liste erstellen</router-link>
+        <router-link to="/buyList"><font-awesome-icon icon="check" /> Liste erledigen</router-link>
+        <router-link to="/logout"><font-awesome-icon icon="user" /> Logout</router-link>
       </div>
       <div class="nav" v-else>
-        <router-link to="/login">Login</router-link>
-        <router-link to="/register">Registrieren</router-link>
+        <router-link to="/login"><font-awesome-icon icon="user" /> Login</router-link>
+        <router-link to="/register"><font-awesome-icon icon="user-plus" /> Registrieren</router-link>
       </div>
     </div>
     <router-view/>
