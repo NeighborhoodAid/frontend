@@ -33,12 +33,18 @@ const routes = [
   {
     path: '/createList',
     name: 'CreateList',
+    meta: {
+      requiresAuth: true
+    },
     // this page is for elderly or sick people to enter their needed supplies
     component: () => import('../views/CreateList.vue')
   },
   {
     path: '/buyList',
     name: 'BuyList',
+    meta: {
+      requiresAuth: true
+    },
     // this page is a check list for people who buy for others
     component: () => import('../views/BuyList.vue')
   },
