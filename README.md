@@ -12,7 +12,10 @@
   </a>
 </p>
 
-# Frontend-Repository von NeighborhoodAid
+## Was ist NeighborhoodAid?
+
+Alle Information zu NeighborhoodAid findest du [hier](https://github.com/NeighborhoodAid/server#was-ist-neighborhoodaid).
+
 
 ## Projekt Set-Up
 ```
