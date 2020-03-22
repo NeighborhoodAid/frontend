@@ -1,7 +1,7 @@
 <template>
     <div class="register">
         <h1>Registrieren</h1>
-        <form id="login-form" @submit.prevent="onRegister" v-if="!isSubmitted">
+        <form @submit.prevent="onRegister" v-if="!isSubmitted">
 
             <div class="container">
                 <label for="email"><b>E-Mail-Adresse</b></label>
@@ -36,13 +36,14 @@
 
 <script lang="ts">
     import Vue from 'vue'
-    export default Vue.extend({
+    export default Vue.extend( {
         data: function () {
             return {
                 isSubmitted: false
             }},
         methods: {
-            onRegister: function (){
+            onRegister: function () {
+                // TODO call to backend
                 this.isSubmitted = true;
             }
         }

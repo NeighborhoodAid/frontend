@@ -1,13 +1,18 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <div class="nav">
       <router-link to="/">Startseite</router-link>
       <router-link to="/about">Über uns</router-link>
-      <router-link v-if="$store.getters['userModule/isLoggedIn']" to="/profile">Profile</router-link>
-      <router-link v-if="$store.getters['userModule/isLoggedIn']" to="/createList">Liste erstellen</router-link>
-      <router-link v-if="$store.getters['userModule/isLoggedIn']" to="/buyList">Liste erledigen</router-link>
-      <router-link v-if="$store.getters['userModule/isLoggedIn']" to="/logout">Logout</router-link>
-      <router-link v-else to="/login">Login</router-link>
+      <div class="nav" v-if="$store.getters['userModule/isLoggedIn']">
+        <router-link to="/profile">Profile</router-link>
+        <router-link to="/createList">Liste erstellen</router-link>
+        <router-link to="/buyList">Liste erledigen</router-link>
+        <router-link to="/logout">Logout</router-link>
+      </div>
+      <div class="nav" v-else>
+        <router-link to="/login">Login</router-link>
+        <router-link to="/register">Registrieren</router-link>
+      </div>
     </div>
     <router-view/>
   </div>
@@ -33,14 +38,14 @@ export default Vue.extend({
     text-align: center;
     color: #12CBC4;
     //background: #1289A7;
-    
+
     height: 100%;
     overflow: auto;
     display: flex;
     flex-direction: column;
   }
 
-  #nav {
+  .nav {
     background: #12CBC4;
     overflow: hidden;
     flex-shrink: 0;
