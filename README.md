@@ -1,35 +1,48 @@
+<div align="center">
+  <img alt="Header" src="https://i.imgur.com/6MnFlEn.png" width="500px">
+    <h1>Nachbarschaftshilfe leicht gemacht :house: :raising_hand:</h1>
+  <strong>Ein Projekt für den #WirVsVirus Hackathons der Bundesregierung</strong>
+</div>
+<p align="center">
+  <a href="https://github.com/NeighborhoodAid/Server/stargazers">
+    <img src="https://img.shields.io/github/stars/NeighborhoodAid/Server.svg?style=plasticr" alt="stars">
+  </a>
+  <a href="https://github.com/NeighborhoodAid/Server/commits/master">
+    <img src="https://img.shields.io/github/last-commit/NeighborhoodAid/Server.svg?style=plasticr" alt="commits">
+  </a>
+</p>
 
-# frontend
+# Frontend-Repository von NeighborAid
 
-## Project setup
+## Projekt Set-Up
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development with backend server
-#### load current version of backend server ####
+### Kompilation und hot-reloads für den Entwicklungsserver mit Backend Server
+#### Laden Sie die aktuelle Version des Backend-Servers herunter ####
 ```
 https://github.com/NeighborhoodAid/Server/releases
 ```
-#### start backend server ####
+#### Starten Sie den Backend-Server ####
 ```
 java -jar Server-{version}-shaded.jar
 ```
 
-### then start frontend
+### Anschließen starten Sie das 'Frontend'
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Kompilation und Minifizierung für die Auslieferung
 ```
 yarn build
 ```
 
-### Lints and fixes files
+### Lints und Dateibehebungen anwenden
 ```
 yarn lint
 ```
 
-### Customize configuration
+### Konfigurationsbearbeitung
 See [Configuration Reference](https://cli.vuejs.org/config/).
